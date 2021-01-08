@@ -54,8 +54,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public JwtUserDto loadUserByUsername(String username) {
+        //设置默认查询数据库
         boolean searchDb = true;
         JwtUserDto jwtUserDto = null;
+
         if (loginProperties.isCacheEnable() && userDtoCache.containsKey(username)) {
             jwtUserDto = userDtoCache.get(username);
             searchDb = false;

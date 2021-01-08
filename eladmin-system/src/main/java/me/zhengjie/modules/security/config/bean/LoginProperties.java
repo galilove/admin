@@ -20,6 +20,7 @@ import com.wf.captcha.base.Captcha;
 import lombok.Data;
 import me.zhengjie.exception.BadConfigurationException;
 import me.zhengjie.utils.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.awt.*;
 import java.util.Objects;
@@ -37,8 +38,11 @@ public class LoginProperties {
      * 账号单用户 登录
      */
     private boolean singleLogin = false;
-
+    /**
+     * 设置验证码格式
+     */
     private LoginCode loginCode;
+
     /**
      * 用户登录信息缓存
      */
@@ -68,7 +72,7 @@ public class LoginProperties {
     }
 
     /**
-     * 依据配置信息生产验证码
+     * 依据配置信息生成验证码
      *
      * @param loginCode 验证码配置信息
      * @return /
