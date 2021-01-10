@@ -1,0 +1,30 @@
+server:
+  port: 9000
+spring:
+  freemarker:
+    check-template-location: false
+  profiles:
+    active: dev
+  jackson:
+    time-zone: GMT+8
+  data:
+    redis:
+      repositories:
+        enabled: false
+
+  #配置 Jpa
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: none
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: true
+
+  redis:
+    #数据库索引
+    database: ${REDIS_DB:0}
+    host: ${REDIS_HOST:192.168.1.110}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PWD:}
+    #连接超时时间
+    timeout: 5000
