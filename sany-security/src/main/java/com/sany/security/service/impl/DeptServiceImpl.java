@@ -19,6 +19,15 @@ import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.sany.security.domain.Dept;
+import com.sany.security.domain.User;
+import com.sany.security.repository.DeptRepository;
+import com.sany.security.repository.RoleRepository;
+import com.sany.security.repository.UserRepository;
+import com.sany.security.service.DeptService;
+import com.sany.security.service.dto.DeptDto;
+import com.sany.security.service.dto.DeptQueryCriteria;
+import com.sany.security.service.mapstruct.DeptMapper;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Sort;
@@ -29,15 +38,6 @@ import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.ObjectUtil;
 import lombok.RequiredArgsConstructor;
 import me.zhengjie.exception.BadRequestException;
-import me.zhengjie.modules.system.domain.Dept;
-import me.zhengjie.modules.system.domain.User;
-import me.zhengjie.modules.system.repository.DeptRepository;
-import me.zhengjie.modules.system.repository.RoleRepository;
-import me.zhengjie.modules.system.repository.UserRepository;
-import me.zhengjie.modules.system.service.DeptService;
-import me.zhengjie.modules.system.service.dto.DeptDto;
-import me.zhengjie.modules.system.service.dto.DeptQueryCriteria;
-import me.zhengjie.modules.system.service.mapstruct.DeptMapper;
 import me.zhengjie.utils.*;
 import me.zhengjie.utils.enums.DataScopeEnum;
 

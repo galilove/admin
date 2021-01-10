@@ -20,6 +20,7 @@ import java.util.Set;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.sany.security.service.OnlineUserService;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +30,6 @@ import org.springframework.web.bind.annotation.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
-import me.zhengjie.modules.security.service.OnlineUserService;
 import me.zhengjie.utils.EncryptUtils;
 
 /**

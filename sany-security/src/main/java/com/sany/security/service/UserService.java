@@ -19,12 +19,12 @@ import java.util.Set;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.sany.security.domain.User;
+import com.sany.security.service.dto.UserDto;
+import com.sany.security.service.dto.UserQueryCriteria;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.multipart.MultipartFile;
 
-import me.zhengjie.modules.system.domain.User;
-import me.zhengjie.modules.system.service.dto.UserDto;
-import me.zhengjie.modules.system.service.dto.UserQueryCriteria;
 
 /**
  * @author Zheng Jie

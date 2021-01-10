@@ -18,6 +18,19 @@ import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.sany.security.domain.Menu;
+import com.sany.security.domain.Role;
+import com.sany.security.domain.User;
+import com.sany.security.repository.RoleRepository;
+import com.sany.security.repository.UserRepository;
+import com.sany.security.service.RoleService;
+import com.sany.security.service.UserCacheClean;
+import com.sany.security.service.dto.RoleDto;
+import com.sany.security.service.dto.RoleQueryCriteria;
+import com.sany.security.service.dto.RoleSmallDto;
+import com.sany.security.service.dto.UserDto;
+import com.sany.security.service.mapstruct.RoleMapper;
+import com.sany.security.service.mapstruct.RoleSmallMapper;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
@@ -32,19 +45,7 @@ import cn.hutool.core.collection.CollectionUtil;
 import lombok.RequiredArgsConstructor;
 import me.zhengjie.exception.BadRequestException;
 import me.zhengjie.exception.EntityExistException;
-import me.zhengjie.modules.security.service.UserCacheClean;
-import me.zhengjie.modules.system.domain.Menu;
-import me.zhengjie.modules.system.domain.Role;
-import me.zhengjie.modules.system.domain.User;
-import me.zhengjie.modules.system.repository.RoleRepository;
-import me.zhengjie.modules.system.repository.UserRepository;
-import me.zhengjie.modules.system.service.RoleService;
-import me.zhengjie.modules.system.service.dto.RoleDto;
-import me.zhengjie.modules.system.service.dto.RoleQueryCriteria;
-import me.zhengjie.modules.system.service.dto.RoleSmallDto;
-import me.zhengjie.modules.system.service.dto.UserDto;
-import me.zhengjie.modules.system.service.mapstruct.RoleMapper;
-import me.zhengjie.modules.system.service.mapstruct.RoleSmallMapper;
+
 import me.zhengjie.utils.*;
 
 /**

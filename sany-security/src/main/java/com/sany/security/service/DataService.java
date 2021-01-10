@@ -14,7 +14,8 @@ package com.sany.security.service;
 
 import java.util.List;
 
-import me.zhengjie.modules.system.service.dto.UserDto;
+import com.sany.security.service.dto.UserDto;
+
 
 /**
  * 数据权限服务类

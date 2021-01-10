@@ -12,12 +12,11 @@
  */
 package com.sany.security.config;
 
+import com.sany.security.config.bean.LoginProperties;
+import com.sany.security.config.bean.SecurityProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import me.zhengjie.modules.security.config.bean.LoginProperties;
-import me.zhengjie.modules.security.config.bean.SecurityProperties;
 
 /**
  * @Author lijiali

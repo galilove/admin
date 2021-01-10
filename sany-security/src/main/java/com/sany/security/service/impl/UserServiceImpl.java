@@ -20,6 +20,16 @@ import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.constraints.NotBlank;
 
+import com.sany.security.domain.User;
+import com.sany.security.repository.UserRepository;
+import com.sany.security.service.OnlineUserService;
+import com.sany.security.service.UserCacheClean;
+import com.sany.security.service.UserService;
+import com.sany.security.service.dto.JobSmallDto;
+import com.sany.security.service.dto.RoleSmallDto;
+import com.sany.security.service.dto.UserDto;
+import com.sany.security.service.dto.UserQueryCriteria;
+import com.sany.security.service.mapstruct.UserMapper;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
@@ -32,16 +42,7 @@ import lombok.RequiredArgsConstructor;
 import me.zhengjie.config.FileProperties;
 import me.zhengjie.exception.EntityExistException;
 import me.zhengjie.exception.EntityNotFoundException;
-import me.zhengjie.modules.security.service.OnlineUserService;
-import me.zhengjie.modules.security.service.UserCacheClean;
-import me.zhengjie.modules.system.domain.User;
-import me.zhengjie.modules.system.repository.UserRepository;
-import me.zhengjie.modules.system.service.UserService;
-import me.zhengjie.modules.system.service.dto.JobSmallDto;
-import me.zhengjie.modules.system.service.dto.RoleSmallDto;
-import me.zhengjie.modules.system.service.dto.UserDto;
-import me.zhengjie.modules.system.service.dto.UserQueryCriteria;
-import me.zhengjie.modules.system.service.mapstruct.UserMapper;
+
 import me.zhengjie.utils.*;
 
 /**

@@ -17,17 +17,17 @@ package com.sany.security.service.impl;
 
 import java.util.*;
 
+import com.sany.security.domain.Dept;
+import com.sany.security.service.DataService;
+import com.sany.security.service.DeptService;
+import com.sany.security.service.RoleService;
+import com.sany.security.service.dto.RoleSmallDto;
+import com.sany.security.service.dto.UserDto;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import me.zhengjie.modules.system.domain.Dept;
-import me.zhengjie.modules.system.service.DataService;
-import me.zhengjie.modules.system.service.DeptService;
-import me.zhengjie.modules.system.service.RoleService;
-import me.zhengjie.modules.system.service.dto.RoleSmallDto;
-import me.zhengjie.modules.system.service.dto.UserDto;
 import me.zhengjie.utils.enums.DataScopeEnum;
 
 /**

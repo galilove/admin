@@ -18,14 +18,15 @@ import java.util.Set;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.sany.security.domain.Role;
+import com.sany.security.service.dto.RoleDto;
+import com.sany.security.service.dto.RoleQueryCriteria;
+import com.sany.security.service.dto.RoleSmallDto;
+import com.sany.security.service.dto.UserDto;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.GrantedAuthority;
 
-import me.zhengjie.modules.system.domain.Role;
-import me.zhengjie.modules.system.service.dto.RoleDto;
-import me.zhengjie.modules.system.service.dto.RoleQueryCriteria;
-import me.zhengjie.modules.system.service.dto.RoleSmallDto;
-import me.zhengjie.modules.system.service.dto.UserDto;
+
 
 /**
  * @author Zheng Jie

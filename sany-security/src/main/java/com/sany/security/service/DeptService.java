@@ -18,6 +18,7 @@ import java.util.Set;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.sany.security.domain.Dept;
 import com.sany.security.service.dto.DeptDto;
 import com.sany.security.service.dto.DeptQueryCriteria;
 
